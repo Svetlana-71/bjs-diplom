@@ -7,7 +7,7 @@ userForm.loginFormCallback = function(data) {
 		if (response.success) {
 			location.reload();
 		} else {
-			alert(`Ошибка авторизации: ${response.error}`);
+			userForm.setLoginErrorMessagelert(`Ошибка авторизации: ${response.error}`);
 		}
 	});
 }
@@ -16,7 +16,7 @@ userForm.registerFormCallback = function(form) {
 		if (response.success) {
 			location.reload();
 		} else {
-      		alert(`Ошибка регистрации: ${response.error}`);			
+			userForm.setRegisterErrorMessage(`Ошибка регистрации: ${response.error}`);			
 		}
 	});
 }

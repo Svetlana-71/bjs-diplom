@@ -72,7 +72,7 @@ ApiConnector.getFavorites((data) => {
         if (response.success) {
             favoritesWidget.clearTable();
             favoritesWidget.fillTable(response.data);
-            favoritesWidget.updateUsersList();
+            favoritesWidget.updateUsersList(response.data);
             favoritesWidget.setMessage(true, "Пользователь добавлен в избранное");
         } else {
             favoritesWidget.setMessage(false, `Ошибка при добавлении пользователя в избранное: ${response.error}`);
@@ -85,7 +85,7 @@ ApiConnector.getFavorites((data) => {
         if (response.success) {
             favoritesWidget.clearTable();
             favoritesWidget.fillTable(response.data);
-            favoritesWidget.updateUsersList();
+            favoritesWidget.updateUsersList(response.data);
             favoritesWidget.setMessage(true, "Пользователь удален из избранного");
         } else {
             favoritesWidget.setMessage(false, `Ошибка при удалении пользователя из избранного: ${response.error}`);
